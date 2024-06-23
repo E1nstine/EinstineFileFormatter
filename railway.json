@@ -2,8 +2,13 @@
   "build": {
     "builder": "nixpacks",
     "plan": {
-      "start": "gunicorn app:app",
-      "build": "pip install -r requirements.txt"
+      "start": {
+        "command": "gunicorn app:app",
+        "services": ["web"]
+      },
+      "build": {
+        "command": "pip install -r requirements.txt"
+      }
     }
   }
 }
