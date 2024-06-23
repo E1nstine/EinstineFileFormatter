@@ -1,0 +1,9 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "plan": {
+      "start": "gunicorn app:app",
+      "build": "pip install -r requirements.txt"
+    }
+  }
+}
